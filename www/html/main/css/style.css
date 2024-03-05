@@ -9,19 +9,17 @@ body {
     margin: 0;
 }
 
-body>section {
-    border: 1px solid gray;
-}
-
 #side_menu {
     grid-area: side_menu;
 }
 #header {
     grid-area: header;
+    border-bottom: 1px solid gainsboro;
 }
 #main {
     grid-area: main;
 }
 #search {
     grid-area: search;
+    border-left: 1px solid gainsboro;
 }

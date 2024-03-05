@@ -1,0 +1,9 @@
+#side_menu {
+    border-right: 1px solid gainsboro;
+}
+
+#side_menu h1 {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}

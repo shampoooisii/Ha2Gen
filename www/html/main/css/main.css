@@ -8,7 +8,7 @@
         "icon menu";
 
     width: 100%;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid gainsboro;
 }
 
 .ha2gen>.icon {
@@ -17,9 +17,30 @@
     justify-content: center;
     margin-top: 5px;
 }
+.icon-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.icon-img>img {
+    width: 150%;
+    position: absolute;
+    margin-left: 20px;
+}
 
 .ha2gen>.title {
     grid-area: title;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    overflow: hidden;
 }
 .ha2gen>.title>.name {
     font-weight: bold;
@@ -39,13 +60,35 @@
 .ha2gen>.menu {
     grid-area: menu;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     flex-wrap: nowrap;
     gap: 20px;
+    padding: 0;
 }
 
-.ha2gen>.menu>div{
-    width: 60px;
+.ha2gen>.menu>li{
+    list-style: none;
     display: flex;
     align-items: center;
+    width: 60px;
+    cursor: pointer;
+}
+.ha2gen>.menu>li::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.ha2gen>.menu>.comment::before {
+    background: url(../img/comment.svg) no-repeat center center;
+}
+.ha2gen>.menu>.reTweet::before {
+    background: url(../img/retweet.svg) no-repeat center center;
+}
+.ha2gen>.menu>.good::before {
+    background: url(../img/good.svg) no-repeat center center;
+}
+.ha2gen>.menu>.bad::before {
+    background: url(../img/bad.svg) no-repeat center center;
 }

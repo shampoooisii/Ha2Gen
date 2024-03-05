@@ -1,0 +1,42 @@
+[
+    {
+        "icon": "./img/left_icon.png",
+        "user_name": "テスト",
+        "user_id": "@test_user",
+        "text": "アイコン設定しました",
+        "comment": 2,
+        "reTweet": 10,
+        "good": 10,
+        "bad": 0
+    },
+    {
+        "icon": null,
+        "user_name": "テスト",
+        "user_id": "@test_user",
+        "text": "今日は寒いね",
+        "comment": 0,
+        "reTweet": 1,
+        "good": 0,
+        "bad": 810
+    },
+    {
+        "icon": null,
+        "user_name": "テスト",
+        "user_id": "@test_user",
+        "text": "ちん子マン",
+        "comment": 0,
+        "reTweet": 2,
+        "good": 0,
+        "bad": 10
+    },
+    {
+        "icon": null,
+        "user_name": "テスト",
+        "user_id": "@test_user",
+        "text": "マン子チン",
+        "comment": 0,
+        "reTweet": 0,
+        "good": 0,
+        "bad": 10
+    }
+]
