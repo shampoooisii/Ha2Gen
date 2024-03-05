@@ -1,0 +1,41 @@
+.hatugen {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 1.5rem auto 2rem;
+    grid-template-areas:
+        "icon title"
+        "icon text"
+        "icon menu";
+
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+.hatugen>.icon {
+    grid-area: icon;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.hatugen>.title {
+    grid-area: title;
+}
+.hatugen>.title>.name {
+    font-weight: bold;
+}
+.hatugen>.title>.id {
+    color: gray;
+}
+.hatugen>.title>.time {
+    color: gray;
+}
+
+
+.hatugen>.text {
+    grid-area: text;
+}
+
+.hatugen>.menu {
+    grid-area: menu;
+}
