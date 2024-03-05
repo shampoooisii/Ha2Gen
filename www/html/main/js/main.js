@@ -30,7 +30,7 @@ $(() => {
         })
     }
     console.log($(".ha2gen>.menu>div"));
-    $(".ha2gen>.menu>div").on('click', () => {
+    $(".ha2gen>.menu>div").on('click', function() {
         console.log($(this).data('menu'))
         console.log(this)
     })
