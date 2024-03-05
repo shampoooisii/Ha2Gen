@@ -1,0 +1,27 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr minmax(min-content, 800px) 3fr;
+    grid-template-rows: 50px calc(100vh - 50px);
+    grid-template-areas:
+        "side_menu header search"
+        "side_menu main   search";
+
+    margin: 0;
+}
+
+body>section {
+    border: 1px solid gray;
+}
+
+#side_menu {
+    grid-area: side_menu;
+}
+#header {
+    grid-area: header;
+}
+#main {
+    grid-area: main;
+}
+#search {
+    grid-area: search;
+}
