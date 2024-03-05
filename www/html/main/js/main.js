@@ -1,18 +1,28 @@
 $(() => {
-    const main = document.querySelector("#main");
     const create_ha2gen = (_ha2gen_deta) => {
-        const ha2gen = $.createElement("div", { class:"ha2gen" });
-        if (!_ha2gen_deta.icon) {
-            const icon = $.createElement("div", { class:"icon" }, "発\n言\n者");
-            ha2gen.appendChild(icon);
-        }
-        const title = $.createElement("div", { class:"title" });
-        const name = $.createElement("span", { class:"name" }, _ha2gen_deta.user_name);
-        title.appendChild(name);
-        const id = $.createElement("span", { class:"id" }, _ha2gen_deta.user_id);
-        title.appendChild(id);
-        ha2gen.appendChild(title);
-        main.appendChild(ha2gen);
+        $('<div>', { class:"ha2gen" }).append(
+            $('<div>', { class:"icon" }).text('発\n言\n者'),
+            $('<div>', { class:"title" }).append(
+                $("<span>", { class:"name" }).text( _ha2gen_deta.user_name),
+                $('<span>', { class:"id" }).text( _ha2gen_deta.user_id),
+                $('<span>', { class:"time" }).text('1時間')
+            ),
+            $('<div>', { class:"text" }).text(_ha2gen_deta.text),
+            $('<div>', { class:"menu" }).append(
+                $('<div>', { class:"comment"}).data('menu','reply').append(
+                    $('<img>', { src:"./img/comment.svg", alt:'💬' , width:'16px'})
+                ),
+                $('<div>', { class:"retweet"}).data('menu','retweet').append(
+                    $('<img>', { src:"./img/retweet.svg", alt:'♻️' , width:'16px'})
+                ),
+                $('<div>', { class:"good"}).data('menu','good').append(
+                    $('<img>', { src:"./img/good.svg", alt:'👍' , width:'16px'})
+                ),
+                $('<div>', { class:"bad"}).data('menu','bad').append(
+                    $('<img>', { src:"./img/bad.svg", alt:'👎' , width:'16px'})
+                ),
+            )
+        ).appendTo('#main')
     }
 
     const get_ha2gen = () => {
@@ -22,6 +32,18 @@ $(() => {
                 user_name: "テスト",
                 user_id: "@test_user",
                 text: "今日は寒いね"
+            },
+            {
+                icon: null,
+                user_name: "テスト",
+                user_id: "@test_user",
+                text: "ちん子マン"
+            },
+            {
+                icon: null,
+                user_name: "テスト",
+                user_id: "@test_user",
+                text: "マン子チン"
             }
         ]
 
@@ -29,9 +51,9 @@ $(() => {
             create_ha2gen(ha2gen_deta);
         })
     }
+    get_ha2gen()
     console.log($(".ha2gen>.menu>div"));
-    $(".ha2gen>.menu>div").on('click', function() {
+    $(document).on('click', '.ha2gen>.menu>div', function() {
         console.log($(this).data('menu'))
-        console.log(this)
     })
 });
