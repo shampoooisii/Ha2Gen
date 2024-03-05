@@ -1,4 +1,4 @@
-.hatugen {
+.ha2gen {
     display: grid;
     grid-template-columns: 10% 1fr;
     grid-template-rows: 1.5rem auto 2rem;
@@ -11,31 +11,41 @@
     border-bottom: 1px solid gray;
 }
 
-.hatugen>.icon {
+.ha2gen>.icon {
     grid-area: icon;
     display: flex;
     justify-content: center;
     margin-top: 5px;
 }
 
-.hatugen>.title {
+.ha2gen>.title {
     grid-area: title;
 }
-.hatugen>.title>.name {
+.ha2gen>.title>.name {
     font-weight: bold;
 }
-.hatugen>.title>.id {
+.ha2gen>.title>.id {
     color: gray;
 }
-.hatugen>.title>.time {
+.ha2gen>.title>.time {
     color: gray;
 }
 
 
-.hatugen>.text {
+.ha2gen>.text {
     grid-area: text;
 }
 
-.hatugen>.menu {
+.ha2gen>.menu {
     grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.ha2gen>.menu>div{
+    width: 60px;
+    display: flex;
+    align-items: center;
 }

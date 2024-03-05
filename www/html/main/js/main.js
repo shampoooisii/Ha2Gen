@@ -1,24 +1,22 @@
-import * as $ from "./tetuquery.js"
-
-(() => {
+$(() => {
     const main = document.querySelector("#main");
-    const create_hatugen = (_hatugen_deta) => {
-        const hatugen = $.createElement("div", { class:"hatugen" });
-        if (!_hatugen_deta.icon) {
+    const create_ha2gen = (_ha2gen_deta) => {
+        const ha2gen = $.createElement("div", { class:"ha2gen" });
+        if (!_ha2gen_deta.icon) {
             const icon = $.createElement("div", { class:"icon" }, "発\n言\n者");
-            hatugen.appendChild(icon);
+            ha2gen.appendChild(icon);
         }
         const title = $.createElement("div", { class:"title" });
-        const name = $.createElement("span", { class:"name" }, _hatugen_deta.user_name);
+        const name = $.createElement("span", { class:"name" }, _ha2gen_deta.user_name);
         title.appendChild(name);
-        const id = $.createElement("span", { class:"id" }, _hatugen_deta.user_id);
+        const id = $.createElement("span", { class:"id" }, _ha2gen_deta.user_id);
         title.appendChild(id);
-        hatugen.appendChild(title);
-        main.appendChild(hatugen);
+        ha2gen.appendChild(title);
+        main.appendChild(ha2gen);
     }
 
-    const get_hatugen = () => {
-        const hatugen_deta_list = [
+    const get_ha2gen = () => {
+        const ha2gen_deta_list = [
             {
                 icon: null,
                 user_name: "テスト",
@@ -27,9 +25,13 @@ import * as $ from "./tetuquery.js"
             }
         ]
 
-        hatugen_deta_list.forEach((hatugen_deta) => {
-            create_hatugen(hatugen_deta);
+        ha2gen_deta_list.forEach((ha2gen_deta) => {
+            create_ha2gen(ha2gen_deta);
         })
     }
-    get_hatugen();
-})();
+    console.log($(".ha2gen>.menu>div"));
+    $(".ha2gen>.menu>div").on('click', () => {
+        console.log($(this).data('menu'))
+        console.log(this)
+    })
+});
