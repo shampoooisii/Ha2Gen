@@ -2,8 +2,50 @@
     border-right: 1px solid gainsboro;
 }
 
+#side_menu .side-menu-inner {
+    margin-left: 30%;
+}
+
 #side_menu h1 {
     margin-left: 20px;
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#side_menu .menu-list {
+    margin-top: 50px;
+    width: 100%;
+}
+
+#side_menu .menu-list li {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    cursor: pointer;
+}
+#side_menu .menu-list li::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    background-color: black;
+}
+#side_menu .menu-list .home::before {
+    background: url(../img/home.svg) no-repeat center center;
+}
+#side_menu .menu-list .search::before {
+    background: url(../img/search.svg) no-repeat center center;
+}
+#side_menu .menu-list .profile::before {
+    background: url(../img/profile.svg) no-repeat center center;
+}
+
+#side_menu .menu-item {
+    width: fit-content;
+    margin-left: 5px;
     font-weight: bold;
 }

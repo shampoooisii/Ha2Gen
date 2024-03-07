@@ -1,6 +1,6 @@
 [
     {
-        "icon": "./img/left_icon.png",
+        "icon": "../icon/left_icon.png",
         "user_name": "テスト",
         "user_id": "@test_user",
         "text": "アイコン設定しました",

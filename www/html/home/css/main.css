@@ -38,9 +38,13 @@
 .ha2gen>.title {
     grid-area: title;
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
     gap: 5px;
     overflow: hidden;
+}
+.ha2gen>.title>span {
+    height: fit-content;
 }
 .ha2gen>.title>.name {
     font-weight: bold;
@@ -75,20 +79,48 @@
 }
 .ha2gen>.menu>li::before {
     content: "";
-    display: block;
+    display: inline;
     width: 16px;
     height: 16px;
     margin-right: 5px;
 }
 .ha2gen>.menu>.comment::before {
-    background: url(../img/comment.svg) no-repeat center center;
+    background-color: gray;
+    mask: url(../img/comment.svg) no-repeat center center;
+}
+.ha2gen>.menu>.comment:hover {
+    color: deepskyblue;
+}
+.ha2gen>.menu>.comment:hover::before {
+    background-color: deepskyblue;
 }
 .ha2gen>.menu>.reTweet::before {
-    background: url(../img/retweet.svg) no-repeat center center;
+    background-color: gray;
+    mask: url(../img/retweet.svg) no-repeat center center;
+}
+.ha2gen>.menu>.reTweet:hover {
+    color: limegreen;
+}
+.ha2gen>.menu>.reTweet:hover::before {
+    background-color: limegreen;
 }
 .ha2gen>.menu>.good::before {
-    background: url(../img/good.svg) no-repeat center center;
+    background: gray;
+    mask: url(../img/good.svg) no-repeat center center;
+}
+.ha2gen>.menu>.good:hover {
+    color: deeppink;
+}
+.ha2gen>.menu>.good:hover::before {
+    background-color: deeppink;
 }
 .ha2gen>.menu>.bad::before {
-    background: url(../img/bad.svg) no-repeat center center;
+    background: gray;
+    mask: url(../img/bad.svg) no-repeat center center;
+}
+.ha2gen>.menu>.bad:hover {
+    color: mediumblue;
+}
+.ha2gen>.menu>.bad:hover::before {
+    background-color: mediumblue;
 }
