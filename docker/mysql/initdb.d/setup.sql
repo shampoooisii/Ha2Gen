@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS ha2gen CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+GRANT ALL ON ha2gen.* TO 'test'@'%';
+
+USE ha2gen;
+
+CREATE TABLE users (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  password_hash VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
+CREATE TABLE accounts (
+  user_id INT NOT NULL,
+  account_id VARCHAR(16) PRIMARY KEY,
+  username VARCHAR(32) NOT NULL,
+  icon_url VARCHAR(255) NOT NULL,
+  profile VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+)
