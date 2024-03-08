@@ -10,7 +10,7 @@ $(() => {
             $('<div>', { class:"title" }).append(
                 $("<span>", { class:"name" }).text( _ha2gen_deta.user_name),
                 $('<span>', { class:"id" }).text( _ha2gen_deta.user_id),
-                $('<span>', { class:"time" }).text('1時間')
+                $('<span>', { class:"time" }).text('一時間')
             ),
             $('<div>', { class:"text" }).text(_ha2gen_deta.text),
             $('<div>', { class:"menu" }).append(

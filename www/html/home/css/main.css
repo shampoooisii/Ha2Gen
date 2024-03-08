@@ -7,7 +7,9 @@
         "icon text"
         "icon menu";
 
+    box-sizing: border-box;
     width: 100%;
+    padding: 5px;
     border-bottom: 1px solid gainsboro;
 }
 
@@ -83,9 +85,9 @@
     width: 16px;
     height: 16px;
     margin-right: 5px;
+    background-color: gray;
 }
 .ha2gen>.menu>.comment::before {
-    background-color: gray;
     mask: url(../img/comment.svg) no-repeat center center;
 }
 .ha2gen>.menu>.comment:hover {
@@ -95,7 +97,6 @@
     background-color: deepskyblue;
 }
 .ha2gen>.menu>.reTweet::before {
-    background-color: gray;
     mask: url(../img/retweet.svg) no-repeat center center;
 }
 .ha2gen>.menu>.reTweet:hover {
@@ -105,7 +106,6 @@
     background-color: limegreen;
 }
 .ha2gen>.menu>.good::before {
-    background: gray;
     mask: url(../img/good.svg) no-repeat center center;
 }
 .ha2gen>.menu>.good:hover {
@@ -115,7 +115,6 @@
     background-color: deeppink;
 }
 .ha2gen>.menu>.bad::before {
-    background: gray;
     mask: url(../img/bad.svg) no-repeat center center;
 }
 .ha2gen>.menu>.bad:hover {
