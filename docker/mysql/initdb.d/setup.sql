@@ -8,7 +8,7 @@ CREATE TABLE users (
   password_hash VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 CREATE TABLE accounts (
   user_id INT NOT NULL,
@@ -16,6 +16,6 @@ CREATE TABLE accounts (
   username VARCHAR(32) NOT NULL,
   icon_url VARCHAR(255) NOT NULL,
   profile VARCHAR(255) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(user_id)
-)
+);

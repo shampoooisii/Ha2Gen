@@ -4,7 +4,8 @@
         "phpmailer/phpmailer": "^6.8",
         "slim/slim": "4.*",
         "slim/psr7": "^1.6",
-        "slim/twig-view": "3.*"
+        "slim/twig-view": "3.*",
+        "php-di/php-di": "7.*"
     },
     "autoload": {
         "psr-4": {
